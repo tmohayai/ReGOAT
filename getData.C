@@ -5,6 +5,7 @@
  * root -b
  * root [0] .L DrawData.C++
  * root [1] DrawData("inputfiles", "outfilename")
+ * example of outfilename: signals.txt (see the process.sh bash script)
 *************************************************************/
 
 //some standard C++ includes
