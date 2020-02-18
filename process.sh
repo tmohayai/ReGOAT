@@ -31,6 +31,6 @@ do
         cd signal
         lar -c multiple_input_output_slice_job.fcl -S ../raw/signals.txt
         ls -d "$PWD"/* > signals.txt
-        cd ../../
+        cd ../..
 
 done
