@@ -1,4 +1,5 @@
 # To setup a new LArIATSoft development area, follow the instructions on https://cdcvs.fnal.gov/redmine/projects/goat/wiki/Setting_up_Offline_Software
+# note: with a recent upgrade to dunegpvms, only sl7 would work for setting up LArIATSoft. 
 # Run this set up script after each login once a LArIATSoft development area is set up
 
 cd to_your_lariat_directory/
