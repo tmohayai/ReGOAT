@@ -2,7 +2,7 @@
  * authors: Tanaz Mohayai (mtanaz@fnal.gov) 
  * To run, open ROOT and enter the following commands:
  * root -b
- * root [0] .L getData.C++
+ * root [0] .L getData.C
  * root [1] getData("inputfiles", "outfilename")
  * example of outfilename: signals.txt (see the process.sh bash script)
 *************************************************************/
@@ -188,9 +188,9 @@ void ProcessEvent(gallery::Event *ev, TFile *outfile, std::string filenamebase, 
         waveforms[i_ch] = new TH1F(histname.Data(),histtitle.Data(),dataSize+1,-0.5,dataSize+0.5);
         
         raw::Uncompress(digitVec.ADCs(), rawadc, digitVec.Compression());
-        
         for (bin = 0; bin < dataSize; bin++){
-            waveforms[i_ch]->SetBinContent(bin+1,rawadc[bin]);
+            	std::cout << "rawadc[" << bin << "] : " << std::endl;
+		waveforms[i_ch]->SetBinContent(bin+1,rawadc[bin]);
         }
         
 	}
@@ -228,7 +228,7 @@ void ProcessEvent(gallery::Event *ev, TFile *outfile, std::string filenamebase, 
         Int_t initBinNoise = 1;
         sigOffset = waveforms[chIDs[i_ch]]->Integral(initBinNoise,finBinNoise)/(finBinNoise - initBinNoise + 1);
         evEnergy = fabs(waveforms[chIDs[i_ch]]->Integral() - nBins*sigOffset);
-           hit.E[i_ch] = evEnergy;;
+        hit.E[i_ch] = evEnergy;;
         hit.offset[i_ch] = sigOffset;
 
 	for (Int_t i = initBinNoise; i < finBinNoise + 1; ++i) {
@@ -290,7 +290,7 @@ void ProcessEvent(gallery::Event *ev, TFile *outfile, std::string filenamebase, 
 
 
 }
-void test(std::string input_files, std::string outfilename="data.root")
+void test_2(std::string input_files, std::string outfilename="data.root")
 {
     gStyle->SetOptStat(0);
     
@@ -335,3 +335,4 @@ void test(std::string input_files, std::string outfilename="data.root")
     outfile->Delete();
     cout << "DONE!" << endl;
 }
+
