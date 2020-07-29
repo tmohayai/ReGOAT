@@ -1,10 +1,9 @@
 /*************************************************************
- * getData.C is sub-module of the DrawData.C module by Kirsty Duffy (kduffy@fnal.gov) 
- * authors: Tanaz Mohayai (mtanaz@fnal.gov) and Guillermo Moroni
+ * authors: Tanaz Mohayai (mtanaz@fnal.gov) 
  * To run, open ROOT and enter the following commands:
  * root -b
- * root [0] .L DrawData.C++
- * root [1] DrawData("inputfiles", "outfilename")
+ * root [0] .L getData.C++
+ * root [1] getData("inputfiles", "outfilename")
  * example of outfilename: signals.txt (see the process.sh bash script)
 *************************************************************/
 
