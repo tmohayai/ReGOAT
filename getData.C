@@ -290,7 +290,7 @@ void ProcessEvent(gallery::Event *ev, TFile *outfile, std::string filenamebase, 
 
 
 }
-void test_2(std::string input_files, std::string outfilename="data.root")
+void getData(std::string input_files, std::string outfilename="data.root")
 {
     gStyle->SetOptStat(0);
     
