@@ -2,7 +2,7 @@
 # note: with a recent upgrade to dunegpvms, only sl7 would work for setting up LArIATSoft. 
 # Run this set up script after each login once a LArIATSoft development area is set up
 
-source /grid/fermiapp/larsoft/products/setup
+source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
 export PRODUCTS=/grid/fermiapp/products/lariat:${PRODUCTS}:/grid/fermiapp/products/common/db
 setup git
 setup gitflow
